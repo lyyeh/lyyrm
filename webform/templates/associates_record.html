@@ -1,0 +1,207 @@
+{% extends 'base.html' %}
+{% block title %} Associate Record {% endblock %}
+
+{% block content %}
+<table class="table table-striped table-hover table-bordered">
+  
+    <tr>
+      <td>
+        <h3>{{ associate_record }}
+  
+        <a href ="{% url 'associate-update' associate_record.id %}"><button class="btn btn-outline-primary" type="button">UPDATE</button></a>
+      </h3> 
+      </td>
+    </tr>
+ </table> 
+
+<ul>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Attribute</th>
+        <th scope="col">Value</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr> 
+        <td><b>Status</b></td>
+        <td>{{ associate_record.status }}</td>
+      </tr>
+
+      <tr> 
+        <td><b>User ID:</b></td>
+        <td>{{ associate_record.userid }}</td>
+      </tr>
+
+      <tr> 
+        <td><b>Display Name:</b></td>
+        <td>{{ associate_record.displayname }}</td>
+      </tr>
+    
+      <tr> 
+        <td><b>First Name:</b></td>
+        <td>{{ associate_record.givenname }}</td>
+      </tr>
+          
+      <tr> 
+        <td><b>Last Name:</b></td>
+        <td>{{ associate_record.surname }}</td>
+      </tr>
+          
+      <tr> 
+        <td><b>Initials:</b></td>
+        <td>{{ associate_record.initials }}</td>
+      </tr>
+          
+      <tr> 
+        <td><b>Start Date</b></td>
+        <td>{{ associate_record.hiredate }}</td>
+      </tr>
+          
+      <tr> 
+        <td><b>End Date</b></td>
+        <td>{{ associate_record.enddate }}</td>
+      </tr>
+                         
+      <tr> 
+        <td><b>Contact E-mail</b></td>
+        <td>{{ associate_record.contactemail }}</td>
+      </tr>
+                
+      <tr> 
+        <td><b>Job Code</b></td>
+        <td>{{ associate_record.jobcode }}</td>
+      </tr>
+                
+      <tr> 
+        <td><b>Job Title</b></td>
+        <td>{{ associate_record.petcojobtitle }}</td>
+      </tr>
+      
+      <tr> 
+        <td><b>Department Name</b></td>
+        <td>{{ associate_record.petcodepartmentname }}</td>
+      </tr>
+
+      <tr> 
+        <td><b>Department Code</b></td>
+        <td>{{ associate_record.petcodepartment }}</td>
+      </tr>
+                
+      <tr> 
+        <td><b>Cost Center</b></td>
+        <td>{{ associate_record.costcenter }}</td>
+      </tr>
+                
+      <tr> 
+        <td><b>Store</b></td>
+        <td>{{ associate_record.petcostore }}</td>
+      </tr>
+                
+      <tr> 
+        <td><b>Manager ID</b></td>
+        <td>{{ associate_record.managerid }}</td>
+      </tr>
+                
+      <tr> 
+        <td><b>Division</b></td>
+        <td>{{ associate_record.petcodivision }}</td>
+      </tr>
+                         
+      <tr> 
+        <td><b>Petco District</b></td>
+        <td>{{ associate_record.petcodistrict }}</td>
+      </tr>
+
+      <tr> 
+        <td><b>Petco Market</b></td>
+        <td>{{ associate_record.petcomarket }}</td>
+      </tr>
+                   
+      <tr> 
+        <td><b>Petco Territory</b></td>
+        <td>{{ associate_record.petcoterritory }}</td>
+      </tr>
+                
+      <tr> 
+        <td><b>Location</b></td>
+        <td>{{ associate_record.petcolocation }}</td>
+      </tr>
+                
+      <tr> 
+        <td><b>Location Type</b></td>
+        <td>{{ associate_record.petcolocationtype }}</td>
+      </tr>
+                
+      <tr> 
+        <td><b>Company</b></td>
+        <td>{{ associate_record.petcocompany }}</td>
+      </tr>
+                
+      <tr> 
+        <td><b>Petco Job Family</b></td>
+        <td>{{ associate_record.petcojobfamily }}</td>
+      </tr>
+                
+      <tr> 
+        <td><b>Pay Group</b></td>
+        <td>{{ associate_record.petcopaygroup }}</td>
+      </tr>
+                
+      <tr> 
+        <td><b>Contract Start Date</b></td>
+        <td>{{ associate_record.contract_startdate }}</td>
+      </tr>
+                
+      <tr> 
+        <td><b>Contract End Date</b></td>
+        <td>{{ associate_record.contract_enddate }}</td>
+      </tr>
+                
+      <tr> 
+        <td><b>Agency</b></td>
+        <td>{{ associate_record.supplier }}</td>
+      </tr>
+                           
+      <tr> 
+        <td><b>Employee Type</b></td>
+        <td>{{ associate_record.employeetype }}</td>
+      </tr>
+                
+      <tr> 
+        <td><b>Worker Type</b></td>
+        <td>{{ associate_record.petcoworkertype }}</td>
+      </tr>
+                
+      <tr> 
+        <td><b>Postal Code</b></td>
+        <td>{{ associate_record.petcopostalcode }}</td>
+      </tr>
+                
+      <tr> 
+        <td><b>City</b></td>
+        <td>{{ associate_record.petcocity }}</td>
+      </tr>
+                      
+      <tr> 
+        <td><b>Country:</b></td>
+        <td>{{ associate_record.petcocountry }}</td>
+      </tr>
+     
+      <tr> 
+        <td><b>Request Number</b></td>
+        <td>{{ associate_record.requestnumber }}</td>
+      </tr>   
+
+      <tr> 
+        <td><b>Comments</b></td>
+        <td>{{ associate_record.comment }}</td>
+      </tr>
+    </tbody>
+  </table>
+      </ul>
+  
+
+{% endblock %}

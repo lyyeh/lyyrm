@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %} Search for a record {% endblock %}
+
+{% block content %}
+<ul>
+<h3>Find Associate</h3>
+<br>
+<body>
+  {% if queried %}
+    
+    <ul>
+      <table class="table table-striped table-hover table-bordered">
+        {% for result in record_search %}
+        <tr>  
+          <td>
+            <a href="{% url 'associate-record' result.id %}">{{result.userid}}</a> - {{result.contactemail}}
+          </td>
+          <td align="right">
+            <a href ="{% url 'associate-update' result.id %}"><button class="btn btn-outline-primary" type="button">UPDATE</button></a>
+          </td>
+        </tr>
+      
+    {% empty %}
+    <ul> <h4>No results</h4></ul>
+    
+    {% endfor %}
+    </ul>
+    
+  {% else %}
+  <ul>
+    <h4>
+        No input, please enter a value.
+    </h4>
+  
+  </ul>
+  {% endif %}
+</table>  
+</body>
+</ul>
+
+{% endblock %}
+
